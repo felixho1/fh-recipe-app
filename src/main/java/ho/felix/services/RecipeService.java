@@ -1,6 +1,6 @@
-package ho.felix.fhrecipeapp.services;
+package ho.felix.services;
 
-import ho.felix.fhrecipeapp.domain.Recipe;
+import ho.felix.domain.Recipe;
 
 import java.util.Set;
 

@@ -1,7 +1,7 @@
-package ho.felix.fhrecipeapp.services;
+package ho.felix.services;
 
-import ho.felix.fhrecipeapp.domain.Recipe;
-import ho.felix.fhrecipeapp.repositories.RecipeRepository;
+import ho.felix.domain.Recipe;
+import ho.felix.repositories.RecipeRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 

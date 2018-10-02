@@ -1,9 +1,6 @@
-package ho.felix.fhrecipeapp.controllers;
+package ho.felix.controllers;
 
-import ho.felix.fhrecipeapp.repositories.CategoryRepository;
-import ho.felix.fhrecipeapp.repositories.RecipeRepository;
-import ho.felix.fhrecipeapp.repositories.UnitOfMeasureRepository;
-import ho.felix.fhrecipeapp.services.RecipeService;
+import ho.felix.services.RecipeService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

@@ -1,6 +1,6 @@
-package ho.felix.fhrecipeapp.repositories;
+package ho.felix.repositories;
 
-import ho.felix.fhrecipeapp.domain.Recipe;
+import ho.felix.domain.Recipe;
 import org.springframework.data.repository.CrudRepository;
 
 public interface RecipeRepository extends CrudRepository<Recipe, Long> {

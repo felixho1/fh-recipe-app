@@ -1,6 +1,6 @@
-package ho.felix.fhrecipeapp.repositories;
+package ho.felix.repositories;
 
-import ho.felix.fhrecipeapp.domain.UnitOfMeasure;
+import ho.felix.domain.UnitOfMeasure;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.Optional;

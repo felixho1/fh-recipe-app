@@ -1,4 +1,4 @@
-package ho.felix.fhrecipeapp.domain;
+package ho.felix.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

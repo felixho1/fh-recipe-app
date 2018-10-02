@@ -1,6 +1,6 @@
-package ho.felix.fhrecipeapp.repositories;
+package ho.felix.repositories;
 
-import ho.felix.fhrecipeapp.domain.Category;
+import ho.felix.domain.Category;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.Optional;

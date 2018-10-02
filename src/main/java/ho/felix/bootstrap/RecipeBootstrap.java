@@ -1,9 +1,9 @@
-package ho.felix.fhrecipeapp.bootstrap;
+package ho.felix.bootstrap;
 
-import ho.felix.fhrecipeapp.domain.*;
-import ho.felix.fhrecipeapp.repositories.CategoryRepository;
-import ho.felix.fhrecipeapp.repositories.RecipeRepository;
-import ho.felix.fhrecipeapp.repositories.UnitOfMeasureRepository;
+import ho.felix.domain.*;
+import ho.felix.repositories.CategoryRepository;
+import ho.felix.repositories.RecipeRepository;
+import ho.felix.repositories.UnitOfMeasureRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
