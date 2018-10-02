@@ -5,6 +5,17 @@
     <title>Recipe Home</title>
 </head>
 <body>
+<!--/*@thymesVar id="recipe" type="ho.felix.fhrecipeapp.domain.Recipe"*/-->
 <h2>My Recipes!</h2>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Description</th>
+    </tr>
+    <tr th:each="recipe : ${recipes}">
+        <td th:text="${recipe.id}">123</td>
+        <td th:text="${recipe.description}">Tasty Goodnees</td>
+    </tr>
+</table>
 </body>
 </html>
