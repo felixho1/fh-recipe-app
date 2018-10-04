@@ -1,6 +1,6 @@
 package ho.felix.domain;
 
-import lombok.*;
+import lombok.Data;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -23,17 +23,18 @@ public class Recipe {
     private Integer servings;
     private String source;
     private String url;
+
     @Lob
     private String directions;
-
-    @Enumerated(value = EnumType.STRING)
-    private Difficulty difficulty;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe")
     private Set<Ingredient> ingredients = new HashSet<>();
 
     @Lob
     private Byte[] image;
+
+    @Enumerated(value = EnumType.STRING)
+    private Difficulty difficulty;
 
     @OneToOne(cascade = CascadeType.ALL)
     private Notes notes;
@@ -45,14 +46,15 @@ public class Recipe {
     private Set<Category> categories = new HashSet<>();
 
     public void setNotes(Notes notes) {
-        notes.setRecipe(this);
-        this.notes = notes;
+        if (notes != null) {
+            this.notes = notes;
+            notes.setRecipe(this);
+        }
     }
 
-    public Recipe addIngredient(Ingredient ingredient) {
+    public Recipe addIngredient(Ingredient ingredient){
         ingredient.setRecipe(this);
-        this.getIngredients().add(ingredient);
+        this.ingredients.add(ingredient);
         return this;
     }
-
 }

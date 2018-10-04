@@ -1,5 +1,6 @@
 package ho.felix.services;
 
+import ho.felix.commands.RecipeCommand;
 import ho.felix.domain.Recipe;
 
 import java.util.Set;
@@ -7,4 +8,5 @@ import java.util.Set;
 public interface RecipeService {
     Set<Recipe> getRecipes();
     Recipe findById(Long id);
+    RecipeCommand saveRecipeCommand(RecipeCommand command);
 }

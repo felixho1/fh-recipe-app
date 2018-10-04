@@ -1,5 +1,7 @@
 package ho.felix.services;
 
+import ho.felix.converters.RecipeCommandToRecipe;
+import ho.felix.converters.RecipeToRecipeCommand;
 import ho.felix.domain.Recipe;
 import ho.felix.repositories.RecipeRepository;
 import org.junit.Before;
@@ -21,14 +23,20 @@ public class RecipeServiceImplTest {
     @Mock
     RecipeRepository recipeRepository;
 
+    @Mock
+    RecipeToRecipeCommand recipeToRecipeCommand;
+
+    @Mock
+    RecipeCommandToRecipe recipeCommandToRecipe;
+
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-        recipeService = new RecipeServiceImpl(recipeRepository);
+        recipeService = new RecipeServiceImpl(recipeRepository, recipeCommandToRecipe, recipeToRecipeCommand);
     }
 
     @Test
-    public void getRecipes() {
+    public void getRecipesTest() {
         // given
         HashSet<Recipe> recipes = new HashSet<>();
         Recipe recipe1 = new Recipe();
@@ -49,7 +57,7 @@ public class RecipeServiceImplTest {
     }
 
     @Test
-    public void findById() {
+    public void getRecipeByIdTest() {
         // given
         Recipe recipe = new Recipe();
         recipe.setId(1L);
