@@ -52,4 +52,13 @@ public class RecipeServiceImpl implements RecipeService {
         log.debug(String.format("Saved RecipeID:%d", savedRecipe.getId()));
         return recipeToRecipeCommand.convert(savedRecipe);
     }
+
+    @Override
+    public RecipeCommand findCommandById(Long id) {
+        Optional<Recipe> recipeOptional = recipeRepository.findById(id);
+        if (!recipeOptional.isPresent()) {
+            throw new RuntimeException("Recipe Not Found!");
+        }
+        return recipeToRecipeCommand.convert(recipeOptional.get());
+    }
 }
